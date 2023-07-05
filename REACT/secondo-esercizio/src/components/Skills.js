@@ -1,22 +1,26 @@
 import React from 'react';
 
-const Skills = () => {
-    return (
-        <section>
-        <ul>
-            <li>
-            <h2>Competenze</h2>
-            <p>Descrizione del progetto 1</p>
-            </li>
-            <li>
-            <h3>Nome Progetto 2</h3>
-            <p>Descrizione del progetto 2</p>
-            </li>
-            {/* Aggiungi altri progetti qui*/}
-            </ul>
-            </section>
 
-            );
-    };
+function Skills() {
+    const listaCompetenze = [
+        "HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"
+
+    ];
+// cicla per ogni competenze crea un elemento puntato 
+    return (
+                                //Quanti  <li> quanti sono i progetti
+        <section>
+
+            <h2>Competenze tecniche</h2>
+            <ul>
+                {listaCompetenze.map((competenza, index) => (    //.map 
+                    <li key={index}>{competenza}</li>
+
+                ))}
+            </ul>
+        </section>
+
+    );
+}
 
 export default Skills;

@@ -5,7 +5,7 @@ function Competenze() {
         "HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"
 
     ];
-// cicla per ogni competenze crea un elemento putato 
+// cicla per ogni competenze crea un elemento puntato 
     return (
                                 //Quanti  <li> quanti sono i progetti
         <section>

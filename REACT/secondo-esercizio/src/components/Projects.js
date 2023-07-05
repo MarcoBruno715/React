@@ -1,30 +1,42 @@
 import React from 'react';
 
-const Projects = () => {
+
+function Projects() {
+    const listaProgetti = [
+        {
+            nome: "Progetto 1",                                         //items
+            descrizioe: "Questo è un progetto di esempio."
+        },
+        {
+
+            nome: "Progetto 2",
+            descrizioe: "Questo è un altro progetto di esempio."
+        }
+    ];
 
     return (
+                                                // <li> quanti sono i progetti
         <section>
-        <h2>Progetti</h2>
-        <ul>
-            <li>
-            <h3>Nome Progetto 1</h3>
-            <p>Descrizione del progetto 1</p>
-            </li>
-            <li>
-            <h3>Nome Progetto 2</h3>
-            <p>Descrizione del progetto 2</p>
-            </li>
-            {/* Aggiungi altri progetti qui*/}
+
+            <h2>I miei progetti</h2>       
+            <ul>                                            
+                {listaProgetti.map((progetto, index) => (    //.map   //
+                    <li key={index}>                     
+                        <h3>{progetto.nome}</h3>
+                        <p>{progetto.descrizione}</p>
+                    </li>
+
+                ))}
+
             </ul>
-            </section>
 
-            );
-    };
+        </section>
 
+    );
+}
 
 
 export default Projects;
-
 
 
 
